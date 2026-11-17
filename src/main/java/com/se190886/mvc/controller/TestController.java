@@ -4,6 +4,7 @@ package com.se190886.mvc.controller;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -14,6 +15,12 @@ public class TestController {
     @GetMapping("/view-content")
     public ResponseEntity<String> getContent(){
         return ResponseEntity.ok("demo github webhook ");
+    }
+
+
+    @GetMapping("/view-shoes-detail")
+    public ResponseEntity<String> getShoesById(@RequestParam String shoeId){
+        return ResponseEntity.ok("this is the information of shoeId:" +shoeId);
     }
 
 }
