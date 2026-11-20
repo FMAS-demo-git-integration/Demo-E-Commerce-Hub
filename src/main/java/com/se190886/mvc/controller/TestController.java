@@ -31,4 +31,30 @@ public class TestController {
     public ResponseEntity<String> deleteShoeById(@RequestParam String shoeId){
         return ResponseEntity.ok("this is the information of shoeId:" +shoeId);
     }
+
+    @GetMapping("/change-status")
+    public ResponseEntity<String> changeStatus(@RequestParam String shoeId){
+        return ResponseEntity.ok("this is the information of shoeId:" +shoeId);
+    }
+
+
+    /**
+     * 
+     * 
+     * asdsadasd
+     * asd
+     * asda
+     * sd
+     * 
+     */
+
+    /**
+     *
+     *
+     * asdsadasd
+     * asd
+     * asda
+     * sd
+     *
+     */
 }
