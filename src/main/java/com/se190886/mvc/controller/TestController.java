@@ -34,7 +34,10 @@ public class TestController {
         return ResponseEntity.ok("this is the information of shoeId:" +shoeId);
     }
 
-
+    @PutMapping("/remane")
+    public ResponseEntity<String> rename(@RequestParam String shoeId){
+        return ResponseEntity.ok("this is the information of shoeId:" +shoeId);
+    }
 
     /**
      * 
