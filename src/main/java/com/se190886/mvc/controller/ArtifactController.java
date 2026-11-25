@@ -49,6 +49,46 @@ public class ArtifactController {
 
         return "redirect:/";
     }
+  @PostMapping("/delete/{id}")
+    public String delete(@PathVariable Integer id, RedirectAttributes redirectAttributes) {
+        boolean deleted = artifactService.delete(id);
+
+        if (deleted) {
+            redirectAttributes.addFlashAttribute("successMessage", "Deleted successfully");
+        } else {
+            redirectAttributes.addFlashAttribute("errorMessage", "Cannot delete an active artifact.");
+        }
+
+        return "redirect:/";
+    }
+
+  @PostMapping("/delete/{id}")
+    public String delete(@PathVariable Integer id, RedirectAttributes redirectAttributes) {
+        boolean deleted = artifactService.delete(id);
+
+        if (deleted) {
+            redirectAttributes.addFlashAttribute("successMessage", "Deleted successfully");
+        } else {
+            redirectAttributes.addFlashAttribute("errorMessage", "Cannot delete an active artifact.");
+        }
+
+        return "redirect:/";
+    }
+
+  @PostMapping("/delete/{id}")
+    public String delete(@PathVariable Integer id, RedirectAttributes redirectAttributes) {
+        boolean deleted = artifactService.delete(id);
+
+        if (deleted) {
+            redirectAttributes.addFlashAttribute("successMessage", "Deleted successfully");
+        } else {
+            redirectAttributes.addFlashAttribute("errorMessage", "Cannot delete an active artifact.");
+        }
+
+        return "redirect:/";
+    }
+
+
 
     @GetMapping("/view/{id}")
     public String viewDevice(@PathVariable Integer id, Model model) {
